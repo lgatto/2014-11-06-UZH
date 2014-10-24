@@ -1,38 +1,27 @@
 ---
 layout: workshop
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
-country: United-States
-humandate: Feb 17-18, 2020
-humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
+venue: Institute of Molecular Life Sciences, University of Zurich
+address: Winterthurerstrasse 190
+country: Switzerland
+humandate: Nov 6-7, 2014
+humantime: 9:00 am - 5:00 pm
+startdate: 2014-11-06
+enddate: 2014-11-07
+latlng: 47.396018,8.5524058
 registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
-helper: ["John von Neumann"]
+instructor: ["Laurent Gatto", "Robert Stojnic"]
+helper: ["Frank Pennekamp", "Peter Fields", "Jelena Aleksic"]
 contact: admin@software-carpentry.org
 #redirect: http://www.3rd.party.workshop.home.page.com
-#eventbrite: 00000000000
-lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
+# eventbrite: 12334106645
+lessons: ['R', 'Git', 'bash']
 ---
+
 <!--
     Edit the values in the parameter block above to be appropriate for your workshop.
     Please use three-letter month names for the 'humandate' field.
 -->
-
-<!-- Remove the block below. -->
-<div align="center">
-  <p><strong><em>
-      This page is a template for workshop home pages.
-      <br/>
-      Please see
-      <a href="//github.com/swcarpentry/bc">github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your workshop.
-  </em></strong></p>
-</div>
 
 <!--
     This block includes the Eventbrite registration widget if 'eventbrite' has been set in the header.
@@ -68,8 +57,12 @@ lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
     or if specialized prerequisite knowledge is required, please mention that.
 -->
 <p>
-  <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  <strong>Who:</strong> This boot camp is an example-driven two-day
+ workshop on advanced R skills. Short tutorials alternate with
+ hands-on practical exercises, and participants are encouraged both to
+ help one another, and to try applying what they have learned to their
+ own research problems during and between sessions. Participants
+ should bring their own laptops to work on.
 </p>
 
 <!--
@@ -90,9 +83,11 @@ lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
     Modify the block below if there are any special requirements.
 -->
 <p>
-  <strong>Requirements:</strong>
-  Participants must bring a laptop with a few specific software packages installed
-  (listed below). They are also required to abide by Software Carpentry's
+  <strong>Requirements:</strong> Participants must bring a laptop with
+  a few specific software packages installed
+  (see <a href="https://github.com/lgatto/rbc/tree/2014-11-06-Zurich">course
+  repo</a> for details). They are also required to abide by Software
+  Carpentry's
   <a href="http://software-carpentry.org/conduct.html">Code of Conduct</a>.
 </p>
 
@@ -118,114 +113,35 @@ lessons: ['R', 'Python', 'SQL', 'Git', 'Bash', 'VM']
 -->
 <h2>Schedule</h2>
 
-<div class="row-fluid">
-  <div class="span6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr> <td>09:00</td> <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td><em>10:30</em></td> <td><em>Coffee break</em></td> </tr>
-      <tr> <td>12:00</td> <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td> <td>Building programs with Python</td> </tr>
-      <tr> <td><em>14:30</em></td> <td><em>Coffee break</em></td> </tr>
-      <tr> <td>16:00</td> <td>Wrap-up</td> </tr>
-    </table>
-  </div>
-  <div class="span6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>09:00</td> <td>Version control with Git</td> </tr>
-      <tr> <td><em>10:30</em></td> <td><em>Coffee break</em></td> </tr>
-      <tr> <td>12:00</td> <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td> <td>Managing data with SQL</td> </tr>
-      <tr> <td><em>14:30</em></td> <td><em>Coffee break</em></td> </tr>
-      <tr> <td>16:00</td> <td>Wrap-up</td> </tr>
-    </table>
-  </div>
-</div>
+<p>The aim of the workshop is to provide a set of tools to enable a
+more structured, efficient and systematic use of programming in
+computational sciences. We will address the following points
+throughout the course:</p>
 
-<hr/>
+<ul>
+  <li>R object-oriented programming: S3 and S4, S4 Reference Classes.</li>
+  <li>R package development</li>  
+  <li>R documentation and roxygen</li>
+  <li>Functional programming, vectorisation</li>
+  <li>Reproducible research and vignettes</li>
+  <li>Debugging and unit testing</li>
+  <li>Automating your pipelines with Makefile</li>
+  <li>Parallelisation: parallel and BiocParallel</li>
+  <li>Code profiling and strategies for optimisation</li>
+  <li>Using C/C++ in R and the Rcpp package</li>
+  <li>Source code versioning using git and github</li>
+</ul>
 
-<!--
-    Edit this block to show what topics will be covered.
--->
-<h2>Syllabus</h2>
+<p>Some of these topics will be addressed through the development of an R
+package that applied object oriented programming. The main thread that
+we will use is the definition and manipulations of generic and
+biological sequences that will, eventually, materialise into a fully
+fledged package. </p>
 
-<div class="row-fluid">
-  <div class="span6">
-    <h3>The Unix Shell</h3>
-    <ul>
-      <li>Files and directories: <code>pwd</code>, <code>cd</code>, <code>ls</code>, <code>mkdir</code>, ...</li>
-      <li>History and tab completion</li>
-      <li>Pipes and redirection</li>
-      <li>Looping over files</li>
-      <li>Creating and running shell scripts</li>
-      <li>Finding things: <code>grep</code>, <code>find</code>, ...</li>
-      <li><a href="novice/ref/01-shell.html">Reference...</a></li>
-    </ul>
-  </div>
-  <div class="span6">
-    <h3>Programming in Python</h3>
-    <ul>
-      <li>Using libraries</li>
-      <li>Working with arrays</li>
-      <li>Reading and plotting data</li>
-      <li>Creating and using functions</li>
-      <li>Loops and conditionals: <code>for</code>, <code>if</code>, <code>else</code>, ...</li>
-      <li>Defensive programming</li>
-      <li>Using Python from the command line</li>
-      <li><a href="novice/ref/03-python.html">Reference...</a></li>
-    </ul>
-  </div>
-  <div class="span6">
-    <h3>Programming in R</h3>
-    <ul>
-      <li>Working with vectors and data frames</li>
-      <li>Reading and plotting data</li>
-      <li>Creating and using functions</li>
-      <li>Loops and conditionals: <code>for</code>, <code>if</code>, <code>else</code></li>
-      <li>Using R from the command line</li>
-      <li><a href="novice/ref/06-R.html">Reference...</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="row-fluid">
-  <div class="span6">
-    <h3>Version Control with Git</h3>
-    <ul>
-      <li>Creating a repository</li>
-      <li>Recording changes to files: <code>add</code>, <code>commit</code>, ...</li>
-      <li>Viewing changes: <code>status</code>, <code>diff</code>, ...</li>
-      <li>Ignoring files</li>
-      <li>Working on the web: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
-      <li>Resolving conflicts</li>
-      <li>Open licenses</li>
-      <li>Where to host work, and why</li>
-      <li><a href="novice/ref/02-git.html">Reference...</a></li>
-    </ul>
-  </div>
-  <div class="span6">
-    <h3>Managing Data with SQL</h3>
-    <ul>
-      <li>Reading and sorting data</li>
-      <li>Filtering with <code>where</code></li>
-      <li>Calculating new values on the fly</li>
-      <li>Handling missing values</li>
-      <li>Combining values using aggregation</li>
-      <li>Combining information from multiple tables using <code>join</code></li>
-      <li>Creating, modifying, and deleting data</li>
-      <li>Programming with databases</li>
-      <li><a href="novice/ref/04-sql.html">Reference...</a></li>
-    </ul>
-  </div>
-</div>
-
-<hr/>
-
-<!--
-    Edit the setup instructions in _includes/setup.html to reflect your workshop.
-    (In particular, most workshops teach either Python or R, not both.)
--->
+<p>See
+the <a href="https://github.com/lgatto/rbc/tree/2014-11-06-Zurich">course
+repo</a> for a detailed programme, relevant content and the course
+material.</p>
 
 <h2>Setup</h2>
 
